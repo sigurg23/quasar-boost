@@ -4,8 +4,8 @@ const routes = [
     path: '/',
     component: () => import('layouts/boost.vue'),
     children: [
-      { path: '', component: () => import('pages/index.vue') },
-      { path: 'contents', component: () => import('pages/contents.vue') }
+      // { path: '', component: () => import('pages/index.vue') },
+      { path: 'main', component: () => import('pages/main.vue') }
     ]
   }
 ]

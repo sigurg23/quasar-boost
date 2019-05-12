@@ -58,9 +58,7 @@
       </q-list-link>
     </q-layout-drawer>
     <q-page-container>
-      <q-page>
-        <h1>aadas</h1>
-      </q-page>
+      <router-view />
     </q-page-container>
   </q-layout>
 </template>
