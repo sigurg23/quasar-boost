@@ -1,22 +1,25 @@
 <template>
   <div class="q-pa-md">
     <q-table
-      title="Treats"
+      title="Объекты учета"
       :data="data"
       :columns="columns"
       row-key="name"
       :sort-method="customSort"
       binary-state-sort
     />
+    <q-btn round color="secondary">
+      <q-icon name="card_giftcard" />
+    </q-btn>
   </div>
 </template>
 
 <style>
-  .center {
+  /* .center {
     margin-left: auto;
       margin-right: auto;
       width: 80%
-}
+} */
 </style>
 
 <script>
@@ -28,19 +31,19 @@ export default {
         {
           name: 'name',
           required: true,
-          label: 'Dessert (100g serving)',
+          label: 'Тип объекта',
           align: 'left',
           field: row => row.name,
           format: val => `${val}`,
           sortable: true
         },
-        { name: 'calories', align: 'center', label: 'Calories', field: 'calories', sortable: true },
-        { name: 'fat', label: 'Fat (g)', field: 'fat', sortable: true },
-        { name: 'carbs', label: 'Carbs (g)', field: 'carbs', sortable: true },
-        { name: 'protein', label: 'Protein (g)', field: 'protein', sortable: true },
-        { name: 'sodium', label: 'Sodium (mg)', field: 'sodium', sortable: true },
-        { name: 'calcium', label: 'Calcium (%)', field: 'calcium', sortable: true, sort: (a, b) => parseInt(a, 10) - parseInt(b, 10) },
-        { name: 'iron', label: 'Iron (%)', field: 'iron', sortable: true, sort: (a, b) => parseInt(a, 10) - parseInt(b, 10) }
+        { name: 'calories', align: 'center', label: 'Владелец', field: 'calories', sortable: true },
+        { name: 'fat', label: 'Создан', field: 'fat', sortable: true },
+        { name: 'carbs', label: 'Изменен', field: 'carbs', sortable: true },
+        { name: 'protein', label: 'Число', field: 'protein', sortable: true }
+        // { name: 'sodium', label: 'Sodium (mg)', field: 'sodium', sortable: true },
+        // { name: 'calcium', label: 'Calcium (%)', field: 'calcium', sortable: true, sort: (a, b) => parseInt(a, 10) - parseInt(b, 10) },
+        // { name: 'iron', label: 'Iron (%)', field: 'iron', sortable: true, sort: (a, b) => parseInt(a, 10) - parseInt(b, 10) }
       ],
       data: [
         {

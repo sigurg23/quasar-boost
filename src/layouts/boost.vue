@@ -32,7 +32,7 @@
         </q-item>
         <q-item>
           <q-item-main>
-            <q-item-title lable>Шариков П.П.</q-item-title>
+            <q-item-title lable>John Doe</q-item-title>
           </q-item-main>
         </q-item>
         <q-item-separator />
